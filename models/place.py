@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Place Module for HBNB project """
-from sqlalchemy import Column, String, Integer, Float
+from sqlalchemy import ForeignKey, Column, String, Integer, Float
 from models.base_model import BaseModel, Base
 
 
