@@ -29,7 +29,8 @@ class Place(BaseModel, Base):
 
     @property
     def reviews(self):
-        """Getter attribute to return the list of Review instances with place_id equal to the current Place.id"""
+        """Getter attribute to return the list of Review instances with
+        place_id equal to the current Place.id"""
         from models import storage
         reviews = []
         for review in storage.all("Review").values():
