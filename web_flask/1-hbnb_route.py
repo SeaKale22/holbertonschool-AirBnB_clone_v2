@@ -12,12 +12,12 @@ def hello_hbnb():
     """returns string"""
     return 'Hello HBNB!'
 
+
 # route for /hbnb
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
     """display HBNB"""
     return 'HBNB'
-
 
 
 # run app on 0.0.0.0, port 5000
