@@ -5,6 +5,7 @@ from flask import Flask
 # create flask app
 app = Flask(__name__)
 
+
 # define route and options
 @app.route('/', strict_slashes=False)
 def hello_hbnb():
