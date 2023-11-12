@@ -59,9 +59,11 @@ def number_template(n):
 def number_parity(n):
     """Display html page with parity of number"""
     if (n % 2) == 0:
-        return render_template('6-number_odd_or_even.html', number=n, parity='even')
+        return render_template('6-number_odd_or_even.html',
+                               number=n, parity='even')
     else:
-        return render_template('6-number_odd_or_even.html', number=n, parity='odd')
+        return render_template('6-number_odd_or_even.html',
+                               number=n, parity='odd')
 
 
 # run app on 0.0.0.0, port 5000
