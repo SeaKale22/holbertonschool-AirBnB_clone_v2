@@ -22,7 +22,7 @@ class State(BaseModel, Base):
     if models.storage_t != "db":
         @property
         def cities(self):
-            """Getter attribute to return the list of City instances with state_id
+            """Getter to return list City instances with state_id
             equal to the current State.id for FileStorage."""
             cities = []
             for city in storage.all("City").values():
