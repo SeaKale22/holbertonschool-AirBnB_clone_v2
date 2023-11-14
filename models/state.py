@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ holds class State"""
 import models
-from models import storage
 from models.base_model import BaseModel, Base
 from models.city import City
 from os import getenv
@@ -26,7 +25,7 @@ class State(BaseModel, Base):
             """Getter to return list City instances with state_id
             equal to the current State.id for FileStorage."""
             cities = []
-            for city in storage.all("City").values():
+            for city in models.storage.all("City").values():
                 if city.state_id == self.id:
                     cities.append(city)
             return cities
