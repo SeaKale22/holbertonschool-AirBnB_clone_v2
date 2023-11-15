@@ -13,8 +13,7 @@ app = Flask(__name__)
 def states_list():
     """Shows html of states list"""
     states = storage.all(State).values()
-    sorted_states = sorted(states, key=lambda x: x.name)
-    return render_template('states_list.html', states=sorted_states)
+    return render_template('states_list.html', states=states)
 
 
 @app.teardown_appcontext
