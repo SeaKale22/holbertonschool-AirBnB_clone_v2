@@ -14,14 +14,14 @@ def states():
     """Shows html of states"""
     states = storage.all("State").values()
     states_sorted = sorted(states, key=lambda state: state.name)
-    return render_template('9-states.htm', states=states_sorted)
+    return render_template('9-states.html', states=states_sorted)
 
 
 @app.route('/states/<id>', strict_slashes=False)
 def states_id(id):
     """Shows html of states by id"""
     state = storage.get("State", id)
-    return render_template('9-states.htm', state=state)
+    return render_template('9-states.html', state=state)
 
 
 @app.teardown_appcontext
